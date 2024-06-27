@@ -1,0 +1,14 @@
+name = "orcfax/orcfax-aiken"
+version = "0.0.0"
+license = "Apache-2.0"
+description = "Orcfax types and helpers for aiken"
+
+[repository]
+user = "orcfax"
+project = "orcfax-aiken"
+platform = "github"
+
+[[dependencies]]
+name = "aiken-lang/stdlib"
+version = "1.9.0"
+source = "github"
