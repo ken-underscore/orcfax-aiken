@@ -1,5 +1,4 @@
 use aiken/interval.{Finite, Interval, IntervalBound}
-use orcfax/types as t
 
 /// `get_bounds` enforces that tx has a finite validity range. 
 /// Any consumer must check that the `created_at` field of the Statement  
