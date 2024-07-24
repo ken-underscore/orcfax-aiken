@@ -5,18 +5,28 @@ pub type FsDat<t> {
   context: Context,
 }
 
-/// For consumers
+/// The statement is for consumers
 pub type Statement<t> {
   feed_id: ByteArray,
   created_at: Int,
   body: t,
 }
 
-/// For orcfax publisher only
-pub type Context {
-  collect_after: Int,
-  collector: ByteArray,
-}
+
+/// The context is for the orcfax publish protocol
+// Orcfax actually uses the following context
+//
+// ```aiken
+// pub type Context {
+//   collect_after: Int,
+//   collector: ByteArray,
+// }
+// ```
+// 
+// As consumers don't need this, 
+// we can ignore it by setting context to be Data.
+
+pub type Context = Data
 
 // Note : 28 bytes
 /// Fsp script
