@@ -9,11 +9,15 @@ pub type Rational {
 pub type RationalFsDat =
   t.FsDat<Rational>
 
+pub fn get_body(dat: RationalFsDat) -> Rational {
+  dat.statement.body
+}
+
 pub type RationalStatement =
   t.Statement<Rational>
 
-pub fn get_body(dat: RationalFsDat) -> Rational {
-  dat.statement.body
+pub fn get_statement(dat: RationalFsDat) -> RationalStatement {
+  dat.statement
 }
 
 /// For the feed: "A->B", 

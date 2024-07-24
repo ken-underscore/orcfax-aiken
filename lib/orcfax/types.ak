@@ -1,3 +1,4 @@
+/// Fs script
 /// The FsDat is the datum containing orcfax statements
 pub type FsDat<t> {
   statement: Statement<t>,
@@ -16,3 +17,11 @@ pub type Context {
   collect_after: Int,
   collector: ByteArray,
 }
+
+// Note : 28 bytes
+/// Fsp script
+pub type PubKey =
+  ByteArray
+
+pub type FspDat =
+  PubKey
