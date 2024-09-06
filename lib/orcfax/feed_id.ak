@@ -9,5 +9,5 @@ use aiken/bytearray
 /// Versioning concerns code upstream.
 /// Orcfax guarantees that the feed id part will not change.
 pub fn starts_with(actual_id: ByteArray, expected_prefix: ByteArray) {
-  ( actual_id |> bytearray.drop(expected_prefix |> bytearray.length) ) == expected_prefix
+  ( actual_id |> bytearray.take(expected_prefix |> bytearray.length) ) == expected_prefix
 }
